@@ -263,7 +263,7 @@ class LogStash::Inputs::Elasticsearch < LogStash::Inputs::Base
   end
 
   def scroll_request scroll_id
-    @client.scroll(:body => { :scroll_id => scroll_id }, :scroll => @scroll)
+    @client.scroll(:body => scroll_id, :scroll => @scroll)
   end
 
   def update_state_file
